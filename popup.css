@@ -1,0 +1,175 @@
+body {
+    width: 380px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+}
+
+.container {
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.subtitle {
+    color: #666;
+    margin-top: 6px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.result {
+    margin-top: 18px;
+}
+
+.section {
+    background: white;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+}
+
+.section h2 {
+    font-size: 14px;
+    margin: 0 0 6px 0;
+}
+
+.section p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+.analyze-button {
+    margin-top: 10px;
+    background: #444;
+}
+
+.analyze-button.hidden {
+    display: none;
+}
+.analysis-result {
+    margin-top: 18px;
+    background: white;
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.analysis-result h2 {
+    margin-top: 0;
+    font-size: 17px;
+}
+
+.score {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 12px 0 4px;
+}
+
+.score span:last-child {
+    font-size: 16px;
+    color: #777;
+}
+
+.analysis-result h3 {
+    margin: 4px 0 14px;
+}
+
+.stats {
+    text-align: left;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.stats p {
+    font-size: 13px;
+    margin: 7px 0;
+}
+
+.reason {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    text-align: left;
+}
+
+.reason h3 {
+    font-size: 14px;
+}
+
+.reason p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #555;
+}
+.claims {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    text-align: left;
+}
+
+.claims h3 {
+    font-size: 14px;
+}
+
+.claims ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.claims li {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+.sources {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    text-align: left;
+}
+
+.sources h3 {
+    font-size: 14px;
+}
+
+.sources ul {
+    padding-left: 20px;
+}
+
+.sources li {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.sources a {
+    color: #333;
+    text-decoration: none;
+}
+
+.sources a:hover {
+    text-decoration: underline;
+}

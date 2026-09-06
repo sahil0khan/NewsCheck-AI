@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "NewsCheck AI",
+  "version": "1.0.0",
+  "description": "AI-powered news credibility checker.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://news.google.com/*"
+],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

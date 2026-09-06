@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NewsCheck AI</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>NewsCheck AI</h1>
+
+        <p class="subtitle">
+            Check the credibility of this article.
+        </p>
+
+        <button id="scanButton">Scan Article</button>
+        <button id="analyzeButton" class="analyze-button hidden">
+    Analyze Article
+</button>
+
+        <div id="result" class="result hidden">
+    <div id="analysisResult" class="analysis-result hidden">
+
+    <h2>🔍 Credibility Analysis</h2>
+
+    <div class="score">
+        <span id="score">78</span>
+        <span>/ 100</span>
+    </div>
+
+    <h3 id="verdict">Mostly Reliable</h3>
+
+    <div class="stats">
+        <p>Claims checked: <strong id="claimsChecked">5</strong></p>
+        <p>Supported: <strong id="supported">4</strong></p>
+        <p>Questionable: <strong id="questionable">1</strong></p>
+    </div>
+
+    <div class="reason">
+        <h3>⚠️ Why?</h3>
+        <p id="reasonText">
+            One claim could not be independently verified.
+        </p>
+    </div>
+    <div class="claims">
+    <h3>📌 Claims Found</h3>
+    <ul id="claimsList"></ul>
+</div>
+<div class="sources">
+    <h3>🔎 Potential Sources</h3>
+    <ul id="sourcesList"></ul>
+</div>
+
+</div>
+
+            <div class="section">
+                <h2>📰 Title</h2>
+                <p id="title"></p>
+            </div>
+
+            <div class="section">
+                <h2>🌐 Source</h2>
+                <p id="site"></p>
+            </div>
+
+            <div class="section">
+                <h2>👤 Author</h2>
+                <p id="author"></p>
+            </div>
+
+            <div class="section">
+                <h2>📝 Article</h2>
+                <p id="article"></p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="popup.js"></script>
+
+</body>
+
+</html>
