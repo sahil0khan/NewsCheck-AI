@@ -87,23 +87,50 @@ if (claims.length > 0) {
 
     try {
 
-        const sources = await searchSources(claims[0]);
+        const allSources = [];
 
-        sources.forEach(source => {
+for (const claim of claims) {
 
-            const li = document.createElement("li");
+    try {
 
-            const link = document.createElement("a");
+        const sources = await searchSources(claim);
 
-            link.textContent = source.title;
-            link.href = source.link;
-            link.target = "_blank";
-            link.rel = "noopener noreferrer";
-
-            li.appendChild(link);
-            sourcesList.appendChild(li);
-
+        allSources.push({
+            claim: claim,
+            sources: sources
         });
+
+    } catch (error) {
+
+        console.error("Source search failed:", error);
+
+    }
+}
+
+     allSources.forEach(item => {
+
+    const claimHeading = document.createElement("li");
+
+    claimHeading.innerHTML =
+        "<strong>Claim:</strong> " + item.claim;
+
+    sourcesList.appendChild(claimHeading);
+
+    item.sources.forEach(source => {
+
+        const sourceItem = document.createElement("li");
+
+        const link = document.createElement("a");
+
+        link.textContent = source.title;
+        link.href = source.link;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+
+        sourceItem.appendChild(link);
+        sourcesList.appendChild(sourceItem);
+    });
+});
 
     } catch (error) {
 
