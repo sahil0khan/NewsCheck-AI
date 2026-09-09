@@ -188,3 +188,35 @@ async function searchSources(query) {
         link: item.querySelector("link")?.textContent || ""
     }));
 }
+async function fetchSourceText(url) {
+
+    try {
+
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error("Could not fetch source.");
+        }
+
+        const html = await response.text();
+
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, "text/html");
+
+        const paragraphs = [...doc.querySelectorAll("p")];
+
+        const text = paragraphs
+            .map(p => p.textContent.trim())
+            .filter(text => text.length > 40)
+            .join(" ");
+
+        return text;
+
+    } catch (error) {
+
+        console.error("Source fetch failed:", error);
+
+        return "";
+
+    }
+}
